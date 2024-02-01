@@ -1,0 +1,131 @@
+/*////////////// LOGIN STYLE ////////////// */
+#root{
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    background-color: #003140;
+}
+.logo-div {
+    background-color: #003140;
+    height: 100%;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0px;
+    padding-right: 300px;
+}
+
+.login-div {
+    width: 560px;
+    background-color: #003140;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 0px px;
+    column-gap: 0px;
+    justify-content: center;
+    position: relative;
+    row-gap: 10px;
+    margin: 0px;
+}
+
+.middle-line {
+    display: inline-block;
+    position: absolute;
+    bottom: 25px;
+}
+
+.login-logo {
+    width: 850px;
+    display: flex;
+    margin-top: 100px;
+}
+
+
+.email {
+
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.password {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.line {
+    position: relative;
+    border: 0px solid black;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    bottom: 20px;
+}
+
+
+.input {
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid #FFFFFF;
+    opacity: 0.6;
+    font-size: 25px;
+}
+
+.sign-in {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 25px;
+    right: 60px;
+}
+
+.button {
+    border: 0px solid #FFFFFF;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+.reg-forgot {
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    right: 60px;
+    align-items: center;
+    grid-template-rows: 0;
+    gap: 0px;
+    top: 35px;
+}
+
+.register {
+    border: 0px solid #FFFFFF;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.forgot-password {
+    border: 0px solid #FFFFFF;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 0.6;
+}
