@@ -13,6 +13,9 @@ import {
 // import EmployeeEdit from './EmployeeEdit';
 // import Form from './components/Form';
 import Login from './login';
+import Topbar from './topbar';
+import Sidebar from './sidebar';
+import Home from './home';
 
 function App() {
   return (
@@ -20,11 +23,14 @@ function App() {
       <Routes>
         
         <Route path="/login" element={<Login />} />
+        
+        {/* <Route path="/" element={<Topbar/>}>
+          <Route path="/" element={<Sidebar/>}/>
+          <Route path="/" element={<Home/>}/>
+        </Route> */}
+        <Route path='/' element={<><Topbar/><Sidebar/><Home/></>}/>
 
-        <Route path="" >
-
-        </Route>
-
+        <Route path="/sidebar" element={<Sidebar/>}/>
         {/* <Route path="/create-form" element={<Form />}/>
 
         <Route path="/" element={<Dashboard />}>

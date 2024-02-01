@@ -1,20 +1,24 @@
 /*////////////// LOGIN STYLE ////////////// */
 #root{
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+
 }
 
 .login-root{
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-items: center;
     justify-content: center;
     background-color: #003140;
 }
+
 .logo-div {
     background-color: #003140;
-    height: 100%;
+    height: auto;
     width: 560px;
     display: flex;
     flex-direction: column;
@@ -26,7 +30,7 @@
 .login-div {
     width: 560px;
     background-color: #003140;
-    height: 1080px;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -53,7 +57,6 @@
 
 
 .email {
-
     color: #FFFFFF;
     font-size: 25px;
     font-weight: 800;
@@ -81,6 +84,7 @@
     border: 0px solid #FFFFFF;
     opacity: 0.6;
     font-size: 25px;
+    width: 80%;
 }
 
 .sign-in {
@@ -106,7 +110,7 @@
     right: 60px;
     align-items: center;
     grid-template-rows: 0;
-    gap: 0px;
+    gap: 15px;
     top: 35px;
 }
 
@@ -128,4 +132,97 @@
     font-size: 25px;
     font-weight: 400;
     opacity: 0.6;
+}
+
+
+
+/*////////////// TOP BAR STYLE ////////////// */
+.root-top-bar {
+    height: 142px; /* Standard topbar height */
+    background-color: #003140; /* Dark blue color from your image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.root-top-bar img {
+    /* Adjust the height of the logo and support icon as needed */
+    font-size: 75px;
+    width: 100px;
+
+}
+
+.Support-Logo{
+    position: absolute;
+    right: 30px;
+}
+
+.top-bar-logo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin: 0px 0px 0px 20px;
+}
+
+.top-bar-logo .Sales-text {
+    /* Styling for the "SALES" text if it has specific requirements */
+    color: #FFD700; /* Assuming it's a gold/yellow color, adjust as needed */
+    font-size: 75px; /* Adjust as needed */
+    font-weight: bold;
+    margin-right: 5px; /* Adds a small space between "SALES" and "OPTIMA" */
+}
+
+.top-bar-logo .Optima-text {
+    color: #ffffff; /* White color for text */
+    font-size: 75px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+
+
+/*////////////// SIDE BAR STYLE ////////////// */
+.root-side-bar {
+    height: 800px;
+    width: 340px;
+    background-color: #FFFFF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    margin: 0 0 45px 0;
+    top: 30px;
+    left: 50px;
+    width: 250px;
+    border: 0px solid black;
+    border-radius: 15px;
+    background-color: #C0C8CA;
+}
+
+.sidebar-button:last-child {
+    margin-top: 150px;
+}
+
+.sidebar-button-text {
+    text-align: start;
+    font-weight: 500;
+    margin-left: 30px;
+    font-size: 15px;
 }
