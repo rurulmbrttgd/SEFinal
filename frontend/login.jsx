@@ -39,9 +39,8 @@ export default function Login() {
                     <h4>Email</h4>
                     <h4>
                         <input 
-                        placeholder="email" 
                         className='input'  // replace with the name of your class
-                        value="abcde@gmail.com" 
+                        placeholder="abcde@gmail.com" 
                         />
                     </h4>
                     <svg
@@ -67,7 +66,6 @@ export default function Login() {
                         <input
                             placeholder='********'
                             className="input"  // replace with the name of your class
-                            value="abcde@gmail.com"
                             type="password"
                         />
                     </h4>
@@ -111,7 +109,7 @@ export default function Login() {
             </svg>
             <div className='logo-div'>
                 <img
-                    src="assets/salesoptima-logo2.png"
+                    src="assets/salesoptima-logo3.png"
                     alt=""
                     className='login-logo'
                 />

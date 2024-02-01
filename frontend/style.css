@@ -1,16 +1,18 @@
 /*////////////// LOGIN STYLE ////////////// */
 #root{
     font-family: 'Poppins', sans-serif;
+
 }
 
-.login-root{
+.login-root {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-items: center;
     justify-content: center;
     background-color: #003140;
+    overflow: hidden; /* Add this line to hide the scrollbar */
 }
 .logo-div {
     background-color: #003140;
@@ -19,8 +21,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin: 0px;
     padding-right: 300px;
+
 }
 
 .login-div {
@@ -29,31 +31,29 @@
     height: 1080px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     text-align: start;
-    gap: 0px px;
-    column-gap: 0px;
     justify-content: center;
     position: relative;
     row-gap: 10px;
-    margin: 0px;
+    overflow: hidden;
 }
 
 .middle-line {
     display: inline-block;
     position: absolute;
     bottom: 25px;
+    overflow: hidden;
 }
 
 .login-logo {
     width: 850px;
     display: flex;
     margin-top: 100px;
+    overflow: hidden;
 }
 
 
 .email {
-
     color: #FFFFFF;
     font-size: 25px;
     font-weight: 800;
@@ -69,8 +69,8 @@
 .line {
     position: relative;
     border: 0px solid black;
-    color: #FFFFFF;
-    background-color: #FFFFFF;
+    color: #ffffff66;
+    background-color: #ffffff66;
     bottom: 20px;
 }
 
@@ -80,7 +80,7 @@
     background-color: rgba(0, 0, 0, 0);
     border: 0px solid #FFFFFF;
     opacity: 0.6;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .sign-in {
@@ -128,4 +128,352 @@
     font-size: 25px;
     font-weight: 400;
     opacity: 0.6;
+    margin-top: 25px;
+}
+
+/*/////// REGISTER STYLE /////////*/
+.logoreg-div {
+    background-color: #003140;
+    height: 100%;
+    /* width: 560px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0px;
+}
+
+.login-reg-div {
+    width: 560px;
+    background-color: #003140;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 0px px;
+    column-gap: 0px;
+    justify-content: center;
+    position: relative;
+    row-gap: 10px;
+    margin-left: 50px;
+}
+
+.forgotPassword-text {
+    font-weight: 600;
+    color: #FFFFFF;
+    font-size: 60px;
+    display: inline;
+    position: relative;
+    top: 50px;
+}
+
+.label {
+    opacity: 0.7;
+    font-weight: 200;
+    font-size: 20px;
+    /* height: 150px; */
+}
+
+.firstName {
+    display: grid;
+    color: #FFFFFF;
+    grid-auto-flow: column;
+}
+
+.name {
+    color: #FFFFFF;
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 80px;
+}
+
+
+
+.first-last-name {
+    width: 250px;
+}
+
+.email-reg {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 80px;
+}
+
+.main-password {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+.password {
+    width: 250px;
+}
+
+.company {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+.busi-certificate {
+    color: #FFFFFF;
+}
+
+.certificate {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+.file-upload {
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 200;
+    opacity: 1;
+}
+
+.Terms-Condition {
+    position: relative;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    width: 100%; /* Added to span the entire width */
+    align-items: center; /* Added for vertical alignment */
+    opacity: 1;
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 10px;
+    opacity: 0.7;
+}
+
+.checkbox {
+    width: 20px;
+    opacity: 1;
+}
+
+
+.next {
+    position: absolute;
+    left: 580px;
+    bottom: 50px;
+}
+
+.phone-number {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+/* Add the following styles to your existing CSS */
+
+.email-reg,
+.company,
+.phone-number
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; /* Adjust the margin as needed */
+}
+
+
+
+.checkbox {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.next {
+    position: absolute;
+    left: 580px;
+    bottom: 50px;
+}
+
+.main-password
+.phone-number,
+.email-reg,
+.company,
+.certificate {
+    width: 100%; /* Span the entire width */
+}
+
+
+
+/*///////// helpcenter //////////*/
+.helpcenter-root {
+    width: 1466px;
+    height: 938px;
+    background-color: #FFFFF8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.report-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+
+.should-text {
+    margin-top: 75px;
+    background-color: 003140;
+    color: #003140;
+}
+
+.reports-text {
+    margin-top: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: #003140;
+}
+
+.subject-text {
+    font-weight: 700;
+    width: 680px;
+}
+
+.search {
+    height: auto;
+    padding-left: 0px;
+    font-size: 20px;
+}
+
+
+.search-input {
+    width: 680px;
+    height: 60px;
+    border-radius: 26px;
+    padding-left: 25px;
+    margin-left: 0px;
+}
+
+.helpbox {
+    display: flex;
+    flex-direction: row;
+    width: 1460px;
+    height: 500px;
+    margin-top: 75px;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtube {
+    width: 460px;
+    height: 470px;
+    background-color: #D2D9DD;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.yt-text{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gray{
+    height: 300px;
+    width: 300px;
+    background-color: #161010;
+}
+
+.youtube-icon{
+    width: 150px;
+    margin-top: 50px;
+}
+
+.handbook {
+    width: 460px;
+    height: 470px;
+    background-color: #D2D9DD;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hb-text{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blue{
+    height: 300px;
+    width: 300px;
+    background-color: #4D9AA4;
+}
+
+.handbook-icon{
+    width: 150px;
+    margin-top: 50px;
+}
+
+.faq {
+    height: 470px;
+    width: 460px;
+    background-color: #D2D9DD;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.faq-text{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.yellow{
+    height: 300px;
+    width: 300px;
+    background-color: #F2E6B7;
+}
+
+.faq-icon{
+    width: 150px;
+    margin-top: 70px;
 }

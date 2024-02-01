@@ -13,6 +13,8 @@ import {
 // import EmployeeEdit from './EmployeeEdit';
 // import Form from './components/Form';
 import Login from './login';
+import Register from './register';
+import HelpCenter from './components/helpcenter';
 
 function App() {
   return (
@@ -21,24 +23,10 @@ function App() {
         
         <Route path="/login" element={<Login />} />
 
-        <Route path="" >
+        <Route path="/register" element={<Register/>} />
 
-        </Route>
-
-        {/* <Route path="/create-form" element={<Form />}/>
-
-        <Route path="/" element={<Dashboard />}>
-          <Route path="/" element={<Home />} />
-        </Route>
-
-        <Route path="/" element={<TopbarEmployee />}>
-          <Route path="/employee" element={<Employee />} />
-        </Route>
-
-        <Route path="/EmployeeDetails/:id" element={<EmployeeDetails />} />
-        <Route path="/EmployeeEdit" element={<EmployeeEdit />} />
-
-        <Route path="/login" element={<Login />} /> */}
+        <Route path="/helpcenter" element={<HelpCenter/>} />
+ 
       </Routes>
     </BrowserRouter>
   );
