@@ -4,7 +4,6 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 //import { useHistory } from 'react-router-dom'
 
-
 export default function Sidebar() {
 
     // const [values, setValues] = useState({
@@ -55,7 +54,7 @@ export default function Sidebar() {
         };
 
         const handleLogout = () => {
-            navigate('/login');
+            navigate('/');
         };
 
     return (

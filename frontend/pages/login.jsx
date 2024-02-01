@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './style.css'
+import '../style.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 //import { useHistory } from 'react-router-dom'
@@ -139,7 +139,7 @@ export default function Login() {
             </svg>
             <div className='logo-div'>
                 <img
-                    src="assets/salesoptima-logo2.png"
+                    src="assets/salesoptima-logo3.png"
                     alt=""
                     className='login-logo'
                 />

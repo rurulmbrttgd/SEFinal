@@ -47,6 +47,7 @@
     display: inline-block;
     position: absolute;
     bottom: 25px;
+    overflow: hidden;
 }
 
 .login-logo {
@@ -134,6 +135,190 @@
     opacity: 0.6;
 }
 
+/*/////// REGISTER STYLE /////////*/
+.logoreg-div {
+    background-color: #003140;
+    height: 100%;
+    /* width: 560px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0px;
+}
+
+.login-reg-div {
+    width: 560px;
+    background-color: #003140;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 0px px;
+    column-gap: 0px;
+    justify-content: center;
+    position: relative;
+    row-gap: 10px;
+    margin-left: 50px;
+}
+
+.forgotPassword-text {
+    font-weight: 600;
+    color: #FFFFFF;
+    font-size: 60px;
+    display: inline;
+    position: relative;
+    top: 50px;
+}
+
+.label {
+    opacity: 0.7;
+    font-weight: 200;
+    font-size: 20px;
+    width: 300px;
+    /* height: 150px; */
+}
+
+.firstName {
+    display: grid;
+    color: #FFFFFF;
+    grid-auto-flow: column;
+}
+
+.name {
+    color: #FFFFFF;
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 80px;
+}
+
+
+
+.first-last-name {
+    width: 250px;
+}
+
+.email-reg {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 80px;
+}
+
+.main-password {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+.password {
+    width: 250px;
+}
+
+.company {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+.busi-certificate {
+    color: #FFFFFF;
+}
+
+.certificate {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 70px;
+}
+
+.file-upload {
+    font-size: 18px;
+    font-weight: 200;
+    opacity: 1;
+}
+
+.Terms-Condition {
+    position: relative;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    width: 100%; /* Added to span the entire width */
+    align-items: center; /* Added for vertical alignment */
+    opacity: 1;
+}
+
+.text {
+    font-size: 20px;
+    opacity: 0.7;
+    position: relative;
+    top: 8px;
+}
+
+.checkbox {
+    width: 20px;
+    opacity: 1;
+}
+
+
+.next {
+    position: absolute;
+    left: 580px;
+    bottom: 50px;
+}
+
+.phone-number {
+    color: #FFFFFF;
+    display: flex;
+    position: relative;
+    top: 50px;
+    margin-bottom: 50px;
+    column-gap: 100px;
+}
+
+/* Add the following styles to your existing CSS */
+
+.email-reg,
+.company,
+.phone-number
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; /* Adjust the margin as needed */
+}
+
+
+
+.checkbox {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.next {
+    position: absolute;
+    left: 580px;
+    bottom: 50px;
+}
+
+.main-password
+.phone-number,
+.email-reg,
+.company,
+.certificate {
+    width: 100%; /* Span the entire width */
+}
 
 
 /*////////////// TOP BAR STYLE ////////////// */
@@ -229,4 +414,9 @@
     font-weight: 500;
     margin-left: 30px;
     font-size: 15px;
+}
+
+/*////////////// HOME STYLE ////////////// */
+.root-home{
+    background-color: #FFFFF8;
 }

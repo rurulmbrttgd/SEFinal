@@ -37,7 +37,7 @@ export default function Topbar() {
 
     const handleSupportClick = () => {
       // Navigate to the desired page when the support image is clicked
-      navigate('/support');
+      navigate('/help');
     };
 
     return (
@@ -51,7 +51,7 @@ export default function Topbar() {
             <h1 className="Sales-text">SALES</h1>
             <h1 className="Optima-text">OPTIMA</h1>
             </div>
-            <a href="/support" onClick={handleSupportClick}>
+            <a href="/help" onClick={handleSupportClick}>
             <img className='Support-Logo'
             src="https://res.cloudinary.com/dxzvh2xex/image/upload/v1706257373/Online_Support_cfiypq.png"
             alt="Online Support"

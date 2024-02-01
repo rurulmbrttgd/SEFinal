@@ -1,0 +1,302 @@
+
+/*///////// helpcenter //////////*/
+.helpcenter-root {
+    width: 1466px;
+    height: 938px;
+    background-color: #FFFFF8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-color{
+    background-color: #FFFFF8;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.report-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+
+.should-text {
+    margin-top: 75px;
+    background-color: 003140;
+    color: #003140;
+}
+
+.reports-text {
+    margin-top: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: #003140;
+}
+
+.subject-text {
+    font-weight: 700;
+    width: 680px;
+}
+
+.search {
+    height: auto;
+    padding-left: 0px;
+    font-size: 20px;
+}
+
+
+.search-input {
+    width: 680px;
+    height: 60px;
+    border-radius: 26px;
+    padding-left: 25px;
+    margin-left: 0px;
+}
+
+.helpbox {
+    display: flex;
+    flex-direction: row;
+    width: 1460px;
+    height: 500px;
+    margin-top: 75px;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtube {
+    width: 460px;
+    height: 470px;
+    background-color: #D2D9DD;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.yt-text{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gray{
+    height: 300px;
+    width: 300px;
+    background-color: #161010;
+}
+
+.youtube-icon{
+    width: 150px;
+    margin-top: 50px;
+}
+
+.handbook {
+    width: 460px;
+    height: 470px;
+    background-color: #D2D9DD;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hb-text{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blue{
+    height: 300px;
+    width: 300px;
+    background-color: #4D9AA4;
+}
+
+.handbook-icon{
+    width: 150px;
+    margin-top: 50px;
+}
+
+.faq {
+    height: 470px;
+    width: 460px;
+    background-color: #D2D9DD;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+}
+
+.faq-text{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.yellow{
+    height: 300px;
+    width: 300px;
+    background-color: #F2E6B7;
+}
+
+.faq-icon{
+    width: 150px;
+    margin-top: 70px;
+}
+
+/*/////// Feedback style /////// */
+
+.feedback-root {
+    width: 1466px;
+    height: 938px;
+    background-color: #FFFFF8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.report-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+
+.should-text {
+    margin-top: 75px;
+    background-color: 003140;
+    color: #003140;
+}
+
+.reports-text {
+    margin-top: 10px;
+
+    padding-bottom: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: #003140;
+}
+
+.subject-text {
+    font-weight: 700;
+    width: 680px;
+}
+
+.feedback-email {
+    height: 450px;
+    padding-left: 0px;
+    font-size: 20px;
+}
+
+.desc-text {
+    font-weight: 700;
+}
+
+.subject-input {
+    width: 680px;
+    height: 60px;
+}
+
+/* ... (your existing CSS) */
+
+.subject-input,
+.desc-input {
+    width: 680px;
+    height: 60px; /* Adjust the height as needed */
+    border: 1px solid #003140; /* Add border color */
+    border-radius: 10px;
+    outline: none; /* Remove default focus outline */
+    padding: 10px; /* Add padding for better appearance */
+    font-size: 20px;
+    transition: border-color 0.3s; /* Add smooth transition on border color */
+}
+
+.subject-input:focus,
+.desc-input:focus {
+    border-color: #001e2c; /* Change border color on focus */
+}
+
+
+.desc-input {
+    width: 680px;
+    height: 180px;
+}
+
+.send-button {
+    width: 150px;
+    background-color: #003140;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55px;
+    margin-top: 20px;
+}
+
+.send-text {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 75px;
+    align-content: start;
+    height: 55px;
+    justify-content: center;
+}
+
+/* ... (your existing CSS) */
+
+.send-button {
+    width: 150px;
+    background-color: #003140;
+    border: none; /* Remove border */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55px;
+    cursor: pointer; /* Add cursor pointer for better interaction */
+    transition: background-color 0.3s; /* Add smooth transition on background color */
+}
+
+.send-button:hover {
+    background-color: #001e2c; /* Change background color on hover */
+}
+
+.send-text {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px; /* Adjust the font size */
+    line-height: 55px; /* Center text vertically */
+}
+

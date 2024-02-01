@@ -13,24 +13,33 @@ import {
 // import EmployeeEdit from './EmployeeEdit';
 // import Form from './components/Form';
 import Login from './login';
-import Topbar from './topbar';
-import Sidebar from './sidebar';
+import Topbar from '../topbar';
+import Sidebar from '../sidebar';
 import Home from './home';
+import Register from '../register';
+import HelpCenter from '../components/helpcenter';
+import Support from './support';
+import FeedbackPage from './feedback';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         
         {/* <Route path="/" element={<Topbar/>}>
           <Route path="/" element={<Sidebar/>}/>
           <Route path="/" element={<Home/>}/>
         </Route> */}
-        <Route path='/' element={<><Topbar/><Sidebar/><Home/></>}/>
+        {/* <Route path='/' element={<><Topbar/><Sidebar/><Home/></>}/> */}
 
-        <Route path="/sidebar" element={<Sidebar/>}/>
+        <Route path="/register" element={<Register />} />
+        <Route path="/help" element={<Support />} />
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/messageus' element={<FeedbackPage/>}/>
+
+
         {/* <Route path="/create-form" element={<Form />}/>
 
         <Route path="/" element={<Dashboard />}>
