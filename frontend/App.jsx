@@ -15,6 +15,7 @@ import {
 import Login from './login';
 import Register from './register';
 import HelpCenter from './components/helpcenter';
+import Feedback from './components/feedback';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
 
         <Route path="/helpcenter" element={<HelpCenter/>} />
  
+        <Route path="/feedback" element={<Feedback />} />
+
       </Routes>
     </BrowserRouter>
   );
