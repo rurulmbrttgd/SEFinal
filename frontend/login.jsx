@@ -117,7 +117,7 @@ export default function Login() {
                     </svg>
                 </div>
                 <div className="sign-in">
-                <button className="button" onClick={handleSignIn}>Sign In</button>
+                <button className="signIn" onClick={handleSignIn}>Sign In</button>
                 </div>
                 <div className="reg-forgot"> 
                     <button className="register" onClick={handleRegister}>Register</button>

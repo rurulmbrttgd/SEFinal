@@ -33,20 +33,12 @@ export default function Topbar() {
     //         });
 
           
-        // const handleSignIn = () => {
-        //   // Redirect to the Sign In page
-        //   history.push('/signin');
-        // };
-      
-        // const handleRegister = () => {
-        //   // Redirect to the Register page
-        //   history.push('/register');
-        // };
-      
-        // const handleForgotPassword = () => {
-        //   // Redirect to the Forgot Password page
-        //   history.push('/forgotpassword');
-        // };
+    const navigate = useNavigate();
+
+    const handleSupportClick = () => {
+      // Navigate to the desired page when the support image is clicked
+      navigate('/support');
+    };
 
     return (
         <div className="root-top-bar">
@@ -59,10 +51,12 @@ export default function Topbar() {
             <h1 className="Sales-text">SALES</h1>
             <h1 className="Optima-text">OPTIMA</h1>
             </div>
+            <a href="/support" onClick={handleSupportClick}>
             <img className='Support-Logo'
             src="https://res.cloudinary.com/dxzvh2xex/image/upload/v1706257373/Online_Support_cfiypq.png"
             alt="Online Support"
             />
+            </a>
         </div>
       </div>
     );
