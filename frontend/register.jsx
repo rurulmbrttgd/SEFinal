@@ -1,5 +1,7 @@
-import React from 'react';
-import './style.css';
+import React, { useState } from 'react'
+import './style.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 export default function Register() {
     return (
@@ -13,8 +15,8 @@ export default function Register() {
             </div>
             <svg
                 width="148"
-                height="1080"
-                viewBox="0 0 148 1080"
+                height="950"
+                viewBox="0 0 148 950"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >

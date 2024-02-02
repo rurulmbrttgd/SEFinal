@@ -1,41 +1,52 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+
 /*////////////// LOGIN STYLE ////////////// */
 #root{
     font-family: 'Poppins', sans-serif;
-
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
 }
 
-.login-root {
-    width: 100%;
+.login-root{
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-items: center;
     justify-content: center;
     background-color: #003140;
-    overflow: hidden; /* Add this line to hide the scrollbar */
 }
+
 .logo-div {
     background-color: #003140;
-    height: 100%;
+    height: auto;
     width: 560px;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin: 0px;
     padding-right: 300px;
-
 }
 
 .login-div {
     width: 560px;
     background-color: #003140;
-    height: 1080px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     text-align: start;
+    gap: 0px px;
+    column-gap: 0px;
     justify-content: center;
     position: relative;
     row-gap: 10px;
-    overflow: hidden;
+    margin: 0px;
 }
 
 .middle-line {
@@ -49,7 +60,6 @@
     width: 850px;
     display: flex;
     margin-top: 100px;
-    overflow: hidden;
 }
 
 
@@ -69,8 +79,8 @@
 .line {
     position: relative;
     border: 0px solid black;
-    color: #ffffff66;
-    background-color: #ffffff66;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
     bottom: 20px;
 }
 
@@ -80,7 +90,8 @@
     background-color: rgba(0, 0, 0, 0);
     border: 0px solid #FFFFFF;
     opacity: 0.6;
-    font-size: 20px;
+    font-size: 25px;
+    width: 80%;
 }
 
 .sign-in {
@@ -91,7 +102,7 @@
     right: 60px;
 }
 
-.button {
+.signIn {
     border: 0px solid #FFFFFF;
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -106,7 +117,7 @@
     right: 60px;
     align-items: center;
     grid-template-rows: 0;
-    gap: 0px;
+    gap: 15px;
     top: 35px;
 }
 
@@ -128,9 +139,7 @@
     font-size: 25px;
     font-weight: 400;
     opacity: 0.6;
-    margin-top: 25px;
 }
-
 /*/////// REGISTER STYLE /////////*/
 .logoreg-div {
     background-color: #003140;
@@ -145,7 +154,7 @@
 .login-reg-div {
     width: 560px;
     background-color: #003140;
-    height: 1080px;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -171,6 +180,7 @@
     opacity: 0.7;
     font-weight: 200;
     font-size: 20px;
+    width: 300px;
     /* height: 150px; */
 }
 
@@ -236,13 +246,11 @@
     display: flex;
     position: relative;
     top: 50px;
-    margin-bottom: 50px;
-    column-gap: 100px;
+    margin-bottom: 70px;
 }
 
 .file-upload {
-    margin-left: 50px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
     opacity: 1;
 }
@@ -260,8 +268,9 @@
 
 .text {
     font-size: 20px;
-    padding-left: 10px;
     opacity: 0.7;
+    position: relative;
+    top: 8px;
 }
 
 .checkbox {
@@ -315,4 +324,110 @@
 .certificate {
     width: 100%; /* Span the entire width */
 }
+
+
+/*////////////// TOP BAR STYLE ////////////// */
+.root-top-bar {
+    height: 142px; /* Standard topbar height */
+    background-color: #003140; /* Dark blue color from your image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.root-top-bar img {
+    /* Adjust the height of the logo and support icon as needed */
+    font-size: 75px;
+    width: 100px;
+
+}
+
+.Support-Logo{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.top-bar-logo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin: 0px 0px 0px 20px;
+}
+
+.top-bar-logo .Sales-text {
+    /* Styling for the "SALES" text if it has specific requirements */
+    color: #FFD700; /* Assuming it's a gold/yellow color, adjust as needed */
+    font-size: 75px; /* Adjust as needed */
+    font-weight: bold;
+    margin-right: 5px; /* Adds a small space between "SALES" and "OPTIMA" */
+}
+
+.top-bar-logo .Optima-text {
+    color: #ffffff; /* White color for text */
+    font-size: 75px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+
+
+/*////////////// SIDE BAR STYLE //////////////*/
+.root-side-bar {
+    height: 800px;
+    width: 340px;
+    background-color: #FFFFF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+}
+
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    margin: 0 0 45px 0;
+    top: 30px;
+    left: 50px;
+    width: 250px;
+    border: 0px solid black;
+    border-radius: 15px;
+    background-color: #C0C8CA;
+    cursor: pointer;
+}
+
+.sidebar-button:last-child {
+    margin-top: 150px;
+}
+
+.sidebar-button-text {
+    text-align: start;
+    font-weight: 500;
+    margin-left: 30px;
+    font-size: 15px;
+}
+/*////////////// HOME STYLE ////////////// */
+.root-home{
+    background-color: #FFFFF8;
+}
+
+/*////// Support Page /////////*/
+/* .root-support{
+    height: 1920px;
+    width: 1080px;
+} */
 

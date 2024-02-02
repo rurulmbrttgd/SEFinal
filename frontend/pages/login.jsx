@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import './style.css'
+import '../style.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+//import { useHistory } from 'react-router-dom'
 
 export default function Login() {
 
@@ -31,6 +32,35 @@ export default function Login() {
     //             setError("Invalid Credentials");
     //         });
     // };
+    const navigate = useNavigate();
+    const handleSignIn = () => {
+        // Redirect to the Sign In page
+        navigate('/home');
+      };
+    const handleRegister = () => {
+        // Redirect to the Register page
+        navigate('/register');
+      };
+    
+    const handleForgotPassword = () => {
+        // Redirect to the Forgot Password page
+        navigate('/forgotpassword');
+      };
+          
+        // const handleSignIn = () => {
+        //   // Redirect to the Sign In page
+        //   history.push('/signin');
+        // };
+      
+        // const handleRegister = () => {
+        //   // Redirect to the Register page
+        //   history.push('/register');
+        // };
+      
+        // const handleForgotPassword = () => {
+        //   // Redirect to the Forgot Password page
+        //   history.push('/forgotpassword');
+        // };
 
     return (
         <div className='login-root'>
@@ -39,8 +69,8 @@ export default function Login() {
                     <h4>Email</h4>
                     <h4>
                         <input 
-                        className='input'  // replace with the name of your class
                         placeholder="abcde@gmail.com" 
+                        className='input'  // replace with the name of your class
                         />
                     </h4>
                     <svg
@@ -87,16 +117,16 @@ export default function Login() {
                     </svg>
                 </div>
                 <div className="sign-in">
-                    <button className="button">Sign In</button>
+                <button className="signIn" onClick={handleSignIn}>Sign In</button>
                 </div>
                 <div className="reg-forgot"> 
-                    <button className="register">Register</button>
-                    <button className="forgot-password">Forgot Password?</button>
+                    <button className="register" onClick={handleRegister}>Register</button>
+                    <button className="forgot-password" onClick={handleForgotPassword}>Forgot Password?</button>
                 </div>
             </div>
             <svg
                 width="148"
-                height="1080"
+                height="950"
                 viewBox="0 0 148 1080"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
