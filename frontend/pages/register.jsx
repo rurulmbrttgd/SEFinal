@@ -72,7 +72,7 @@ export default function Register() {
 
                 <div className='Terms-Condition'>
                     <input type="checkbox" className='checkbox' />
-                    <p className='text'>I agree with the Terms and Conditions</p>
+                    <p className='text-register'>I agree with the Terms and Conditions</p>
                 </div>
 
                 <svg
