@@ -1,8 +1,16 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+
 /*////////////// LOGIN STYLE ////////////// */
 #root{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     overflow: hidden;
+    height: 100%;
+    
 
 }
 
@@ -420,3 +428,9 @@
 .root-home{
     background-color: #FFFFF8;
 }
+
+
+
+/*////////////// Support STYLE ////////////// */
+
+

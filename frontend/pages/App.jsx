@@ -16,10 +16,11 @@ import Login from './login';
 import Topbar from '../topbar';
 import Sidebar from '../sidebar';
 import Home from './home';
-import Register from '../register';
-import HelpCenter from '../components/helpcenter';
+import Register from './register';
 import Support from './support';
 import FeedbackPage from './feedback';
+import Restore from './databackup';
+import ProductPage from './product';
 
 function App() {
   return (
@@ -28,16 +29,14 @@ function App() {
         
         <Route path="/" element={<Login />} />
         
-        {/* <Route path="/" element={<Topbar/>}>
-          <Route path="/" element={<Sidebar/>}/>
-          <Route path="/" element={<Home/>}/>
-        </Route> */}
-        {/* <Route path='/' element={<><Topbar/><Sidebar/><Home/></>}/> */}
 
         <Route path="/register" element={<Register />} />
         <Route path="/help" element={<Support />} />
         <Route path='/home' element={<Home/>}/>
         <Route path='/messageus' element={<FeedbackPage/>}/>
+        <Route path='/backup' element={<Restore/>}/>
+        <Route path='/product' element={<ProductPage/>}/>
+
 
 
         {/* <Route path="/create-form" element={<Form />}/>

@@ -46,7 +46,7 @@ export default function Sidebar() {
         };
 
         const handleDataBackup = () => {
-            navigate('/databackup');
+            navigate('/backup');
         };
         
         const handleMessageUs = () => {
