@@ -4,9 +4,6 @@ import './components.css'
 export default function Product() {    
     return (
         <div className='product-root'>
-            <div className='home-dashboard'>
-                <div className='Dashboard_module.content'>
-                    <div className='productContent'>
                         <div className='firstColumn'>
                             <input type="checkbox" />
                         </div>
@@ -43,8 +40,5 @@ export default function Product() {
                             <h4 className='styles.searchHeader'>Search</h4>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
     );
 };
