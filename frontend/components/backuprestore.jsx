@@ -4,7 +4,6 @@ import './components.css'
 export default function Backup() {    
     return (
         <div className='col p-0 m-0 root-backup'>
-            <div className='root-home'>
                 <h1 className="title">Data Backup</h1>
                 <h1 className="title2">Restore Data</h1>
                 <div className="dataBackup">
@@ -42,7 +41,6 @@ export default function Backup() {
                         <button className="import">Import</button>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };
