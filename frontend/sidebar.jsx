@@ -99,6 +99,7 @@ export default function Sidebar() {
                     />
                     <span className="sidebar-button-text">Message Us</span>
                 </div>
+                
                 <div className="sidebar-button" onClick={handleLogout}>
                     <img
                         src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"

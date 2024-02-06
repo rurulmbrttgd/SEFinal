@@ -124,9 +124,10 @@ export default function Login() {
                     <button className="forgot-password" onClick={handleForgotPassword}>Forgot Password?</button>
                 </div>
             </div>
+            <div className="middle-line">
             <svg
                 width="148"
-                height="950"
+                height="1080"
                 viewBox="0 0 148 1080"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,9 +135,9 @@ export default function Login() {
                 <path
                     d="M103.5 1080L144.974 866.644C149.509 843.314 145.587 819.131 133.909 798.43L13.928 585.736C-2.84687 555.999 -3.29059 519.758 12.7512 489.619L134.883 260.159C145.939 239.387 149.316 215.383 144.42 192.367L103.5 0"
                     stroke="white"
-                    className='middle-line'
                 />
             </svg>
+            </div>
             <div className='logo-div'>
                 <img
                     src="assets/salesoptima-logo3.png"

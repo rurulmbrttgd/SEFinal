@@ -15,7 +15,6 @@ export default function Topbar() {
 
     return (
         <div className="root-top-bar">
-        <div className="logo-div">
             <div className="top-bar-logo">
             <img
                 src="https://res.cloudinary.com/dxzvh2xex/image/upload/v1706257191/salesoptima-logo2_ltpbkb.png"
@@ -25,12 +24,11 @@ export default function Topbar() {
             <h1 className="Optima-text">OPTIMA</h1>
             </div>
             <a href="/help" onClick={handleSupportClick}>
-            <img className='Support-Logo'
-            src="https://res.cloudinary.com/dxzvh2xex/image/upload/v1706257373/Online_Support_cfiypq.png"
-            alt="Online Support"
-            />
+              <img className='w-75'
+              src="https://res.cloudinary.com/dxzvh2xex/image/upload/v1706257373/Online_Support_cfiypq.png"
+              alt="Online Support"
+              />
             </a>
-        </div>
       </div>
     );
 };
