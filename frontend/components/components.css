@@ -241,7 +241,7 @@
 
 
 .root-backup {
-    width: 1466px;
+    width: 1000px;
     height: auto;
     background-color: #FFFFF8;
     position: relative;
@@ -250,87 +250,79 @@
     align-items: center;
 }
 
-.dataBackup {
-    text-align: start;
-    display: flex;
-    width: 1400px;
-    padding-bottom: 5px;
-    row-gap: 0px;
-    padding-top: 0px;
-    flex-direction: column;
-    align-content: start;
-    justify-content: start;
-    position: relative;
 
-}
 
 .backUp {
     display: grid;
     grid-auto-flow: column;
-    width: 1300px;
+    width: 1200px;
     position: relative;
     gap: 0px 50px;
     column-gap: 80px;
-    margin: 0px 0px 0px 80px;
+    margin: 0px 0 0px 25px;
     top: 80px;
-}
-
-.text {
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-}
-
-.title {
-    position: absolute;
-    text-align: start;
-    left: 635px;
-    color: #0B0B0B;
-    overflow: visible;
-    z-index: 1;
-    top: 45px;
 }
 
 .mainBackup {
     position: relative;
     background-color: #AFC7CF;
     border-radius: 13px;
-    height: 365px;
+    height: 270px;
     padding: 0px;
-    margin: 0px 0px 15px;
-    top: 30px;
+    margin: 0px 80px 15px 0;
+    top: 28px;
 }
 
 .mainRestore {
     position: relative;
-    height: 365px;
-    padding-top: 0px;
+    height: 270px;
     top: 35px;
     background-color: #AFC7CF;
     border-radius: 13px;
+    margin: 0px 80px 15px 0;
 }
 
 .Restore {
-    width: 1300px;
+    width: 1200px;
     position: relative;
-    margin: 0px 0px 0px 40px;
-    top: 150px;
+    margin: 0px 0 0px 25px;
+    top: 140px;
 }
+
+
+.text {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.title {
+    position: absolute;
+    text-align: start;
+    left: 520px;
+    color: #0B0B0B;
+    overflow: visible;
+    z-index: 1;
+    top: 10px;
+}
+
+
 
 .title2 {
     position: absolute;
     text-align: start;
-    left: 635px;
+    left: 500px;
     color: #0B0B0B;
     overflow: visible;
     z-index: 1;
-    bottom: 310px;
+    bottom: 120px;
 }
 
 .dropdown {
-    height: 50px;
-    width: 80%;
+    height: 40px;
+    width: 60%;
     text-align: center;
     font-size: 30px;
     font-style: italic;
@@ -352,7 +344,7 @@
 }
 
 .fileUpload {
-    font-size: 35px;
+    font-size: 30px;
     text-align: start;
     margin-left: 40px;
 }
