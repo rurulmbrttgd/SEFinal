@@ -61,7 +61,7 @@ export default function Sidebar() {
         <div className="root-side-bar">
                 <div className="sidebar-button" onClick={handleHome}>
                     <img
-                        src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                        src="assets/home.png"
                         alt=""
                         className="icon"
                     />
@@ -69,7 +69,7 @@ export default function Sidebar() {
                 </div>
                 <div className="sidebar-button" onClick={handleCustomers}>
                     <img
-                        src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                        src="assets/customer.png"
                         alt=""
                         className="icon"
                     />
@@ -77,7 +77,7 @@ export default function Sidebar() {
                 </div>
                 <div className="sidebar-button" onClick={handleProduct}>
                     <img
-                        src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                        src="assets/product.png"
                         alt=""
                         className="icon"
                     />
@@ -85,7 +85,7 @@ export default function Sidebar() {
                 </div>
                 <div className="sidebar-button" onClick={handleDataBackup}> 
                     <img
-                        src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                        src="assets/backup.png"
                         alt=""
                         className="icon"
                     />
@@ -93,7 +93,7 @@ export default function Sidebar() {
                 </div>
                 <div className="sidebar-button" onClick={handleMessageUs}>
                     <img
-                        src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                        src="assets/message.png"
                         alt=""
                         className="icon"
                     />
@@ -102,7 +102,7 @@ export default function Sidebar() {
                 
                 <div className="sidebar-button" onClick={handleLogout}>
                     <img
-                        src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                        src="assets/logout.png"
                         alt=""
                         className="icon"
                     />
