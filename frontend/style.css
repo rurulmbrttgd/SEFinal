@@ -368,7 +368,7 @@
 /*////////////// SIDE BAR STYLE //////////////*/
 .root-side-bar {
     height: 100vh;
-    width: 260px;
+    width: 300px;
     background-color: #FFFFF8;
     display: flex;
     flex-direction: column;
@@ -396,7 +396,6 @@
 .sidebar-button {
     display: flex;
     flex-direction: row;
-    align-content: center;
     align-items: center;
     position: relative;
     padding: 10px 0 10px 20px;
@@ -425,6 +424,4 @@
     background-color: #FFFFF8;
 }
 
-.root-store{
-    position: relative;
-}
+

@@ -3,16 +3,18 @@ import './components.css'
 
 export default function HelpCenter() {    
     return (
-        <div className='helpcenter-root'>
-            <div className='report-text'>
-                <h1 className='should-text'>How can we help?</h1>
-            </div>
+        <div className='col p-0 m-0 helpcenter-root'>
+            <div className='Caption'>
+                <div className='report-text'>
+                    <h1 className='should-text'>How can we help?</h1>
+                </div>
 
-            <div className='search'>
-                <input
-                    className='search-input'
-                    placeholder="Search, Contacts, Message, Reports... "
-                />
+                <div className='search'>
+                    <input
+                        className='search-input'
+                        placeholder="Search, Contacts, Message, Reports... "
+                    />
+                </div>
             </div>
             <div className="helpbox">
                 <div className="youtube">

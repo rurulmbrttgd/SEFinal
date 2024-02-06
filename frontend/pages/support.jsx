@@ -11,7 +11,7 @@ export default function Support() {
 return(
     <div className='root-support'>
         <Topbar/>
-        <div className='d-flex content-color'>
+        <div className='d-flex root-support1'>
             <Sidebar/>
             <HelpCenter/>
         </div>

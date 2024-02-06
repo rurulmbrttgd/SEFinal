@@ -11,7 +11,7 @@ export default function ProductPage() {
 return(
     <div className='root-product'>
         <Topbar/>
-        <div className='d-flex content-color'>
+        <div className='d-flex'>
             <Sidebar/>
             <Product/>
         </div>

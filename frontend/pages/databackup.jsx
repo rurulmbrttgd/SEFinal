@@ -10,7 +10,7 @@ export default function Restore() {
 return(
     <div className='root-restore'>
         <Topbar/>
-        <div className='d-flex'>
+        <div className='d-flex content-color'>
             <Sidebar/>
             <Backup/>
         </div>
