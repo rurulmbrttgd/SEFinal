@@ -22,7 +22,7 @@ export default function Backup() {
                             <p className="text">
                                 To
                                 <select className="dropdown">
-                                    <option>Seleect Month</option>
+                                    <option>Select Month</option>
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>

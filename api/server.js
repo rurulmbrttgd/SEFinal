@@ -63,3 +63,16 @@ app.get('/customers', (req, res) => {
     return res.json({ customers: data });
   });
 });
+
+
+app.get('/product', (req, res) => {
+  const sql = "SELECT * FROM product";
+
+  db.query(sql, (err, data) => {
+    if (err) {
+      return res.status(500).json({ Message: "Server Side Error" });
+    }
+
+    return res.json({ customers: data });
+  });
+});
