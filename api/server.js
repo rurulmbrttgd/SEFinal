@@ -50,3 +50,16 @@ app.post('/login', (req, res) => {
 app.listen(8081, () => {
   console.log("Running");
 });
+
+
+app.get('/customers', (req, res) => {
+  const sql = "SELECT * FROM customer";
+
+  db.query(sql, (err, data) => {
+    if (err) {
+      return res.status(500).json({ Message: "Server Side Error" });
+    }
+
+    return res.json({ customers: data });
+  });
+});

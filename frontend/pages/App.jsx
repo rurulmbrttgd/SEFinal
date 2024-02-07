@@ -31,11 +31,7 @@ function App() {
         
         <Route path="/" element={<Login />} />
         
-        {/* <Route path="/" element={<Topbar/>}>
-          <Route path="/" element={<Sidebar/>}/>
-          <Route path="/" element={<Home/>}/>
-        </Route> */}
-        {/* <Route path='/' element={<><Topbar/><Sidebar/><Home/></>}/> */}
+
 
         <Route path="/register" element={<Register />} />
         <Route path="/help" element={<Support />} />
@@ -46,20 +42,7 @@ function App() {
         <Route path='/product' element={<ProductPage />}/>
 
 
-        {/* <Route path="/create-form" element={<Form />}/>
 
-        <Route path="/" element={<Dashboard />}>
-          <Route path="/" element={<Home />} />
-        </Route>
-
-        <Route path="/" element={<TopbarEmployee />}>
-          <Route path="/employee" element={<Employee />} />
-        </Route>
-
-        <Route path="/EmployeeDetails/:id" element={<EmployeeDetails />} />
-        <Route path="/EmployeeEdit" element={<EmployeeEdit />} />
-
-        <Route path="/login" element={<Login />} /> */}
       </Routes>
     </BrowserRouter>
   );
