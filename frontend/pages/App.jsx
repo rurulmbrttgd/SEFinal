@@ -38,7 +38,7 @@ function App() {
         <Route path='/customers' element={<CustomerPage/>}/>
         <Route path='/databackup' element={<Restore />}/>
         <Route path='/product' element={<ProductPage />}/>
-
+        {/* <Route path='/transactions/${customer_id}' element={<Transaction/>}/> */}
 
 
       </Routes>
