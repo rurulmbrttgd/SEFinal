@@ -1,7 +1,22 @@
 import React from 'react'
 import './components.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function HelpCenter() {    
+
+    const navigate = useNavigate();
+    const handleLink = () => {
+        // Redirect to YouTube
+        window.open('https://www.youtube.com', '_blank');
+    };
+
+    const downloadFile = () => {
+        const link = document.createElement('a');
+        link.href = '/assets/SalesOptimaUserManual.pdf'; // Replace with the actual file URL
+        link.download = 'SalesOptimaUserManual.pdf'; // Replace with the desired file name and extension
+        link.click();
+    };
+
     return (
         <div className='col p-0 m-0 helpcenter-root'>
             <div className='Caption'>
@@ -19,23 +34,27 @@ export default function HelpCenter() {
             <div className="helpbox">
                 <div className="youtube">
                     <h2 className='yt-text'>SalesOptima Tutorial Video</h2>
-                    <div className='gray'>
+
+                    <button className='gray'  onClick={handleLink}>
+                        
                         <img
                             src="/assets/youtube.png"
                             alt=""
                             className='youtube-icon'
                         />
-                    </div>
+
+                    </button>
                 </div>
+
                 <div className="handbook">
                     <h2 className='hb-text'>SalesOptima Handbook</h2>
-                    <div className='blue'>
-                        <img
-                            src="/assets/pdf.png"
-                            alt=""
-                            className='handbook-icon'
-                        />
-                    </div>
+                    <button className='blue' onClick={downloadFile}>
+                            <img
+                                src="/assets/pdf.png"
+                                alt=""
+                                className='handbook-icon'
+                            />
+                    </button>
                 </div>
                 <div className="faq">
                     <h2 className='faq-text'>Frequently Asked Questions</h2>
