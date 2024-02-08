@@ -1,113 +1,90 @@
-import React, { useState } from 'react'
-import './style.css'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-//import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react';
+import './style.css';
+import { NavLink, useNavigate } from 'react-router-dom'; // Import NavLink and useNavigate
 
 export default function Sidebar() {
+    const [activeButton, setActiveButton] = useState('');
 
-    // const [values, setValues] = useState({
-    //     username: '',
-    //     password: ''
-    // })
+    const handleSetActiveButton = (buttonName) => {
+        setActiveButton(buttonName);
+    };
+    
+    const navigate = useNavigate();
+    
+    const handleHome = () => {
+        navigate('/home');
+    };
+    
+    const handleCustomers = () => {
+        navigate('/customers');
+    };
+    
+    const handleProduct = () => {
+        navigate('/product');
+    };
 
-    // const navigate = useNavigate()
-    // axios.defaults.withCredentials = true;
-    // const [error, setError] = useState('')
+    const handleDataBackup = () => {
+        navigate('/databackup');
+    };
+    
+    const handleMessageUs = () => {
+        navigate('/messageus');
+    };
 
-    // axios.defaults.withCredentials = true;
-
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     axios.post('http://localhost:8081/login', values)
-    //         .then(res => {
-    //             if (res.data.Status === "Login Successfully!") {
-    //                 navigate('/');
-    //             } else {
-    //                 setError("Wrong Email or Password");
-    //             }
-    //         })
-    //         .catch(err => {
-    //             console.error(err);
-    //             setError("Invalid Credentials");
-    //         });
-
-        const navigate = useNavigate();
-        const handleHome = () => {
-            navigate('/home');
-        };
-      
-        const handleCustomers = () => {
-            navigate('/customers');
-        };
-      
-        const handleProduct = () => {
-            navigate('/product');
-        };
-
-        const handleDataBackup = () => {
-            navigate('/databackup');
-        };
-        
-        const handleMessageUs = () => {
-            navigate('/messageus');
-        };
-
-        const handleLogout = () => {
-            navigate('/');
-        };
+    const handleLogout = () => {
+        navigate('/');
+    };
 
     return (
         <div className="root-side-bar">
-                <div className="sidebar-button" onClick={handleHome}>
-                    <img
-                        src="assets/home.png"
-                        alt=""
-                        className="icon"
-                    />
-                    <span className="sidebar-button-text">Home</span>
-                </div>
-                <div className="sidebar-button" onClick={handleCustomers}>
-                    <img
-                        src="assets/customer.png"
-                        alt=""
-                        className="icon"
-                    />
-                    <span className="sidebar-button-text">Customers</span>
-                </div>
-                <div className="sidebar-button" onClick={handleProduct}>
-                    <img
-                        src="assets/product.png"
-                        alt=""
-                        className="icon"
-                    />
-                    <span className="sidebar-button-text">Product</span>
-                </div>
-                <div className="sidebar-button" onClick={handleDataBackup}> 
-                    <img
-                        src="assets/backup.png"
-                        alt=""
-                        className="icon"
-                    />
-                    <span className="sidebar-button-text">Data backup &amp; Restore</span>
-                </div>
-                <div className="sidebar-button" onClick={handleMessageUs}>
-                    <img
-                        src="assets/message.png"
-                        alt=""
-                        className="icon"
-                    />
-                    <span className="sidebar-button-text">Message Us</span>
-                </div>
-                
-                <div className="sidebar-button" onClick={handleLogout}>
-                    <img
-                        src="assets/logout.png"
-                        alt=""
-                        className="icon"
-                    />
-                    <span className="sidebar-button-text">Log out</span>
-                </div>
+            <NavLink
+                to="/home"
+                className={`sidebar-button ${activeButton === 'Home' ? 'active' : ''}`}
+                onClick={() => handleSetActiveButton('Home')}
+            >
+                <img src="assets/home.png" alt="" className="icon" />
+                <span className="sidebar-button-text">Home</span>
+            </NavLink>
+            <NavLink
+                to="/customers"
+                className={`sidebar-button ${activeButton === 'Customers' ? 'active' : ''}`}
+                onClick={() => handleSetActiveButton('Customers')}
+            >
+                <img src="assets/customer.png" alt="" className="icon" />
+                <span className="sidebar-button-text">Customers</span>
+            </NavLink>
+            <NavLink
+                to="/product"
+                className={`sidebar-button ${activeButton === 'Product' ? 'active' : ''}`}
+                onClick={() => handleSetActiveButton('Product')}
+            >
+                <img src="assets/product.png" alt="" className="icon" />
+                <span className="sidebar-button-text">Product</span>
+            </NavLink>
+            <NavLink
+                to="/databackup"
+                className={`sidebar-button ${activeButton === 'DataBackup' ? 'active' : ''}`}
+                onClick={() => handleSetActiveButton('DataBackup')}
+            >
+                <img src="assets/backup.png" alt="" className="icon" />
+                <span className="sidebar-button-text">Data backup &amp; Restore</span>
+            </NavLink>
+            <NavLink
+                to="/messageus"
+                className={`sidebar-button ${activeButton === 'MessageUs' ? 'active' : ''}`}
+                onClick={() => handleSetActiveButton('MessageUs')}
+            >
+                <img src="assets/message.png" alt="" className="icon" />
+                <span className="sidebar-button-text">Message Us</span>
+            </NavLink>
+            <NavLink
+                to="/"
+                className={`sidebar-button ${activeButton === 'LogOut' ? 'active' : ''}`}
+                onClick={() => handleSetActiveButton('LogOut')}
+            >
+                <img src="assets/logout.png" alt="" className="icon" />
+                <span className="sidebar-button-text">Log out</span>
+            </NavLink>
         </div>
     );
 };

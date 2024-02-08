@@ -109,6 +109,21 @@ border-radius: 15px;
     /* margin-top: 60px; */
 }
 
+/*Help Center hehe*/
+.youtube:hover {
+    background-color: #f0f0f0; 
+    cursor: pointer;
+}
+.handbook:hover {
+    background-color: #f0f0f0; 
+    cursor: pointer;
+}
+
+.faq:hover {
+    background-color: #f0f0f0; 
+    cursor: pointer;
+}
+
 .handbook {
     width: 370px;
     height: 350px;
