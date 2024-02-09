@@ -115,3 +115,19 @@ app.get('/customers/:id', (req, res) => {
     }
   });
 });
+
+//Forgot Password
+app.post('/forgotpassword', (req, res) => {
+  const { busowner_email, busowner_password } = req.body;
+  // You may want to perform additional validation here
+
+  // Update the user's password in the database
+  const sql = "UPDATE businessowner SET busowner_password = ? WHERE busowner_email = ?";
+  db.query(sql, [busowner_password, busowner_email], (err, data) => {
+    if (err) {
+      return res.status(500).json({ Message: "Server Side Error" });
+    }
+
+    return res.json({ Status: "Password Reset Successfully!" });
+  });
+});
