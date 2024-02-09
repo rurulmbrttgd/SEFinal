@@ -24,6 +24,8 @@ import CustomerPage from './customer';
 import Restore from './databackup';
 import ProductPage from './product';
 import TransactionsPage from './transaction';
+import ForgotPassword from '../forgotPassword';
+
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
         <Route path='/databackup' element={<Restore />}/>
         <Route path='/product' element={<ProductPage />}/>
         <Route path="/customers/:id" element={<TransactionsPage />} />
+
+        <Route path='/forgotpassword' element={<ForgotPassword />}/>
 
       </Routes>
     </BrowserRouter>
