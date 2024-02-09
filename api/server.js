@@ -131,3 +131,28 @@ app.post('/forgotpassword', (req, res) => {
     return res.json({ Status: "Password Reset Successfully!" });
   });
 });
+
+// Define a GET endpoint to fetch data between the specified date range
+app.get('/data', (req, res) => {
+  // Extract the query parameters from the request
+  const fromDate = req.query.fromDate;
+  const toDate = req.query.toDate;
+
+  // SQL query to fetch data between the specified date range
+  const sql = `
+      SELECT * 
+      FROM Transaction 
+      WHERE transaction_date >= ? AND transaction_date <= ?
+  `;
+
+  // Execute the SQL query with the specified date range
+  db.query(sql, [fromDate, toDate], (err, data) => {
+      if (err) {
+          console.error('Error executing query:', err);
+          res.status(500).json({ status: 'Error', message: 'Internal server error' });
+      } else {
+          // Send the fetched data in the response
+          res.json({ status: 'Success', data });
+      }
+  });
+});
