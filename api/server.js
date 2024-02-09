@@ -65,6 +65,8 @@ app.get('/customers', (req, res) => {
 });
 
 
+
+//get product
 app.get('/product', (req, res) => {
   const sql = "SELECT * FROM product";
 
@@ -74,5 +76,58 @@ app.get('/product', (req, res) => {
     }
 
     return res.json({ customers: data });
+  });
+});
+
+
+app.get('/customers/:id', (req, res) => {
+  const customer_id = req.params.id;
+
+  // SQL query to retrieve transactions of the customer along with total amount information
+  const sql = `
+    SELECT 
+        t.transaction_id,
+        t.product_id,
+        t.product_name,
+        t.product_quantity,
+        t.product_price,
+        t.transaction_date,
+        ta.total_price,
+        ta.total_amount
+    FROM 
+        Transaction t
+    JOIN 
+        TotalAmount ta ON t.transaction_id = ta.transaction_id
+    WHERE 
+        t.customer_id = ?
+  `;
+
+  db.query(sql, [customer_id], (err, transactions) => {
+    if (err) {
+      console.error('Error executing query:', err);
+      res.status(500).json({ status: 'Error', message: 'Internal server error' });
+    } else if (transactions.length === 0) {
+      // If no transactions for the customer ID are found
+      res.status(404).json({ status: 'Error', message: 'No transactions found for this customer' });
+    } else {
+      // If transactions are found, send the data in the response
+      res.json({ status: 'Success', transactions });
+    }
+  });
+});
+
+//Forgot Password
+app.post('/forgotpassword', (req, res) => {
+  const { busowner_email, busowner_password } = req.body;
+  // You may want to perform additional validation here
+
+  // Update the user's password in the database
+  const sql = "UPDATE businessowner SET busowner_password = ? WHERE busowner_email = ?";
+  db.query(sql, [busowner_password, busowner_email], (err, data) => {
+    if (err) {
+      return res.status(500).json({ Message: "Server Side Error" });
+    }
+
+    return res.json({ Status: "Password Reset Successfully!" });
   });
 });

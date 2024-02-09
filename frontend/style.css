@@ -375,7 +375,7 @@
     justify-content: start;
     text-align: start;
     align-items: start;
-    border-right: 1px solid black; 
+    /* border-right: 1px solid black;  */
     padding-right: 10px; 
 
 }

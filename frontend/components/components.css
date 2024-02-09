@@ -8,10 +8,8 @@
     flex-direction: column;
     align-items: center;
 }
-/* 
-.content-color{
-    background-color: #FFFFF8;
-} */
+ 
+
 
 .content {
     display: flex;
