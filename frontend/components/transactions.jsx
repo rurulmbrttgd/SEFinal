@@ -19,8 +19,8 @@ export default function Transaction() {
   }, [id]); // Add id to the dependency array to trigger useEffect when id changes
 
   return (
-    <div>
-      <h2>Transactions for Customer ID: {id}</h2>
+    <div className='root-transact'>
+      <h2 className='transac-title'>Transactions for Customer ID: {id}</h2>
       <table className='table'>
         <thead>
           <tr className='content-color'>
