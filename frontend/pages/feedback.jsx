@@ -11,7 +11,7 @@ export default function FeedbackPage() {
 return(
     <div className='root-feedback'>
         <Topbar/>
-        <div className='d-flex'>
+        <div className='d-flex content-color'>
             <Sidebar/>
             <Feedback/>
         </div>

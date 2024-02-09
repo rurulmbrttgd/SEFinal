@@ -375,6 +375,9 @@
     justify-content: start;
     text-align: start;
     align-items: start;
+    border-right: 1px solid black; 
+    padding-right: 10px; 
+
 }
 
 /* .login-root{
@@ -393,10 +396,7 @@
     height: 40px;
 }
 
-.root-side-bar {
-    border-right: 1px solid black; 
-    padding-right: 10px; 
-}
+
 .sidebar-button {
     display: flex;
     flex-direction: row;

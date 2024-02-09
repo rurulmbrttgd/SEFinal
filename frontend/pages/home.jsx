@@ -10,7 +10,7 @@ export default function Home() {
 return(
     <div className='root-home'>
         <Topbar/>
-        <div>
+        <div className='d-flex content-color'>
             <Sidebar/>
         </div>
     </div>
