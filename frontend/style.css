@@ -375,7 +375,7 @@
     justify-content: start;
     text-align: start;
     align-items: start;
-    border-right: 1px solid black; 
+    /* border-right: 1px solid black;  */
     padding-right: 10px; 
 
 }
@@ -444,4 +444,61 @@
 .customer-data{
     height: 100px;
     max-height: 100px;
+}
+
+/* .table {
+    background-color: black;
+} */
+
+/*////////////// Forgot Password STYLE //////////////*/
+
+.forgot-div{
+    width: 500px;
+    background-color: #003140;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: start;
+    column-gap: 0px;
+    justify-content: center;
+    position: relative;
+    row-gap: 10px;
+    left: 150px;
+}
+.forgotP-text{
+    color: white;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.reset-password{
+    border: 0px solid #FFFFFF;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.cancel{
+    border: 0px solid #FFFFFF;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.reset-cancel{
+    display: grid;
+    grid-auto-flow: row;
+    position: relative;
+    right: 20px;
+    align-items: center;
+    grid-template-rows: 0;
+    gap: 15px;
+    top: 35px;
 }
