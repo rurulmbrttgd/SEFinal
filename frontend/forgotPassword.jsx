@@ -3,44 +3,42 @@ import './style.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-export default function forgotPassword() {
+export default function ForgotPassword() {
+    const [values, setValues] = useState ({
+        busowner_email: '',
+        busowner_password: '',
+        confirmPassword: '',
+      })
     
-    // const [values, setValues] = useState({
-    //     busowner_email: '',
-    //     busowner_password: ''
-    // })
-    
-    // const navigate = useNavigate()
-    // axios.defaults.withCredentials = true;
-    // const [error, setError] = useState('')
+    const navigate = useNavigate()
+    const handleResetPassword = () => {
 
-    // axios.defaults.withCredentials = true;
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     axios.post('http://localhost:8081/login', values)
-    //         .then(res => {
-    //             if (res.data.Status === "Login Successfully!") {
-    //                 navigate('/home');
-    //             } else {
-    //                 setError("Wrong Email or Password");
-    //             }
-    //         })
-    //         .catch(err => {
-    //             console.error(err);
-    //             setError("Invalid Credentials");
-    //         });
-    // };
+        // Perform validation (e.g., check if passwords match)
+        if (values.busowner_password !== values.confirmPassword) {
+          // Handle password mismatch
+          console.log("Passwords do not match");
+          return;
+        }
+      
+        // Send a request to the server to reset the password
+        axios.post('http://localhost:8081/forgotpassword', values)
+          .then(res => {
+            navigate('/');
+            // Handle successful password reset
+            console.log(res.data);
+          })
+          .catch(err => {
+            // Handle error
+            console.error(err);
+          });
+      };
 
-    // const handleRegister = () => {
-    //     // Redirect to the Register page
-    //     navigate('/register');
-    //   };
-    
-    // const handleForgotPassword = () => {
-    //     // Redirect to the Forgot Password page
-    //     navigate('/forgotpassword');
-    //   };
+
+      const handleCancel = () => {
+        navigate('/login');
+      };
+
 
     return (
         <div className='login-root'>
@@ -95,7 +93,7 @@ export default function forgotPassword() {
                     </svg>
                 </div>
                 <div className="password">  {/* replace with the name of your class */}
-                    <h4>Password</h4>
+                    <h4>New Password</h4>
                     <h4 className="password-text">  {/* replace with the name of your class */}
                         <input
                             placeholder='********'
@@ -129,7 +127,7 @@ export default function forgotPassword() {
                             placeholder='********'
                             className="input"  // replace with the name of your class
                             type="password"
-                            onChange={e => setValues({...values, busowner_password: e.target.value})}
+                            onChange={e => setValues({...values, confirmPassword: e.target.value})}
                         />
                     </h4>
                     <svg
@@ -151,8 +149,8 @@ export default function forgotPassword() {
                 </div>
 
                 <div className="reset-cancel"> 
-                    <button className="reset-password">Reset Password</button>
-                    <button className="cancel" >Cancel</button>
+                    <button className="reset-password" onClick={handleResetPassword}> Reset Password</button>
+                    <button className="cancel" onClick={handleCancel}>Cancel</button>
                 </div>
 
             </div>
