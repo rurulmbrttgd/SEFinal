@@ -4,6 +4,33 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 export default function Register() {
+    const navigate = useNavigate();
+
+    const [values, setValues] = useState({
+      first_name: '',
+      last_name: '',
+      email: '',
+      company: '',
+      phone_number: '',
+      cert: '',
+      password: '',
+      confirm_password: '',
+    });
+  
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      try {
+        const response = await axios.post('http://localhost:8081/register', values);
+        console.log(response.data);
+        // Optionally, you can navigate to another page upon successful registration
+        navigate('/');
+      } catch (error) {
+        console.error(error.response.data);
+      }
+    };
+
     return (
         <div className='login-root'>
             <div className='logoreg-div'>
@@ -27,70 +54,62 @@ export default function Register() {
                 />
             </svg>
             <div className='login-reg-div'>
+            <form onSubmit={handleSubmit}>
+
                 <div className='name'>
                     <div className='first-last-name'>
                         <label className='label'>First name</label>
-                        <input className='input' placeholder="Erica Joy" />
+                        <input className='input' placeholder="Erica Joy" onChange={e => setValues({...values, busowner_fname: e.target.value})}/>
                     </div>
                     <div className='first-last-name'>
                         <label className='label'>Last name</label>
-                        <input className='input' placeholder="Cavaneyro" />
+                        <input className='input' placeholder="Cavaneyro" onChange={e => setValues({...values, busowner_lname: e.target.value})} />
                     </div>
                 </div>
 
                 <div className='email-reg'>
                     <label className='label'>Email Address</label>
-                    <input className='input' placeholder="abcde@gmail.com" />
+                    <input className='input' placeholder="abcde@gmail.com" onChange={e => setValues({...values, busowner_email: e.target.value})}/>
                 </div>
 
                 <div className='company'>
                     <label className='label'>Company</label>
-                    <input className='input' placeholder="WeebDev" />
+                    <input className='input' placeholder="WeebDev" onChange={e => setValues({...values, busowner_company: e.target.value})}/>
                 </div>
 
                 <div className='phone-number'>
                     <label className='label'>Phone Number</label>
-                    <input className='input' placeholder="+63 908 123 4567" />
+                    <input className='input' placeholder="+63 908 123 4567" onChange={e => setValues({...values, busowner_phone: e.target.value})}/>
                 </div>
 
                 <div className='main-password'>
                     <div className='password'>
                         <label className='label'>Password</label>
-                        <input className='input' placeholder="**********" />
+                        <input className='input' placeholder="**********" onChange={e => setValues({...values, busowner_password: e.target.value})}/>
                     </div>
                     <div className='password'>
                         <label className='label'>Confirm Password</label>
-                        <input className='input' placeholder="**********" />
+                        <input className='input' placeholder="**********" onChange={e => setValues({...values, confirm_password: e.target.value})}/>
                         <input className='input' />
                     </div>
                 </div>
 
                 <div className='certificate'>
                     <label className='label'>Business Certificate</label>
-                    <input type="file" className='file-upload' />
+                    <input type="file" className='file-upload' onChange={e => setValues({...values, busowner_cert: e.target.value})}/>
                 </div>
 
                 <div className='Terms-Condition'>
-                    <input type="checkbox" className='checkbox' />
+                    <input type="checkbox" className='checkbox' required/>
                     <p className='text'>I agree with the Terms and Conditions</p>
                 </div>
 
-                <svg
-                    width="123"
-                    height="99"
-                    viewBox="0 0 123 99"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className='next'
-                >
-                    <path
-                        d="M20.5 78.375V20.625L82 49.5L20.5 78.375Z"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinejoin="round"
-                    />
-                    <path d="M102.5 16.5V82.5" stroke="white" strokeWidth="1.5" />
-                </svg>
+
+                <button type='submit' className='next'>
+                <img src="assets/next.png"></img>
+        </button>
+                </form>
+
             </div>
         </div>
     );

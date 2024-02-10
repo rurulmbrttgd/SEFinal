@@ -17,8 +17,8 @@ app.use(cookieParser());
 
 const db = mysql.createConnection({
   host: "127.0.0.1",
-  user: "root",
-  password: "",
+  user: "dev",
+  password: "jenjen",
   database: "salesoptima",
 });
 
@@ -156,3 +156,53 @@ app.get('/data', (req, res) => {
       }
   });
 });
+
+
+
+app.post('/register', (req, res) => {
+  const {
+    busowner_fname,
+    busowner_lname,
+    busowner_email,
+    busowner_phone,
+    busowner_company,
+    busowner_cert,
+    busowner_password,
+  } = req.body;
+
+    // Check if the email is already registered
+    const checkEmailQuery = "SELECT * FROM businessowner WHERE busowner_email = ?";
+    db.query(checkEmailQuery, [busowner_email], (err, data) => {
+      if (err) {
+        return res.status(500).json({ Message: "Server Side Error" });
+      }
+  
+      if (data.length > 0) {
+        return res.status(400).json({ Message: "Email is already registered" });
+      }
+  
+      // Insert new user into the database
+      const insertUserQuery =
+        "INSERT INTO businessowner (busowner_fname, busowner_lname, busowner_email, busowner_phone, busowner_company, busowner_cert, busowner_password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+  
+      db.query(
+        insertUserQuery,
+        [busowner_fname, busowner_lname, busowner_email, busowner_phone, busowner_company, busowner_cert, busowner_password],
+        (err, result) => {
+          if (err) {
+            return res.status(500).json({ Message: "Server Side Error" });
+          }
+  
+          return res.json({ Status: "Registration Successful!" });
+        }
+      );
+    });
+  });
+
+  app.post('/logout', (req, res) => {
+    // Clear the token from the client (browser) by removing the cookie
+    res.clearCookie('token', { httpOnly: true });
+  
+    // Respond with a success message or any other relevant information
+    res.json({ status: 'Success', message: 'Logout successful' });
+  });

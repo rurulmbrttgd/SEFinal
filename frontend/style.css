@@ -278,12 +278,6 @@
 }
 
 
-.next {
-    position: absolute;
-    left: 580px;
-    bottom: 50px;
-}
-
 .phone-number {
     color: #FFFFFF;
     display: flex;
@@ -314,6 +308,7 @@
     position: absolute;
     left: 580px;
     bottom: 50px;
+    background-color: transparent;
 }
 
 .main-password
@@ -513,4 +508,3 @@
 .root-transaction{
     background-color: #FFFFF8;
 }
-

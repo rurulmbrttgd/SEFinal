@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { NavLink, useNavigate } from 'react-router-dom'; // Import NavLink and useNavigate
+import axios from 'axios';
 
 export default function Sidebar() {
     const [activeButton, setActiveButton] = useState('');
@@ -31,9 +32,21 @@ export default function Sidebar() {
         navigate('/messageus');
     };
 
-    const handleLogout = () => {
-        navigate('/');
-    };
+    const handleLogout = async () => {
+        try {
+          // Make a request to the logout endpoint on the server
+          await axios.post('http://localhost:8081/logout');
+    
+          // Clear the token from localStorage (optional, as the server already cleared the cookie)
+          localStorage.removeItem('token');
+    
+          // Navigate to the login page
+          navigate('/');
+        } catch (error) {
+          console.error('Error during logout:', error);
+          // Handle errors if needed
+        }
+      };
 
     return (
         <div className="root-side-bar">
@@ -80,7 +93,7 @@ export default function Sidebar() {
             <NavLink
                 to="/"
                 className={`sidebar-button ${activeButton === 'LogOut' ? 'active' : ''}`}
-                onClick={() => handleSetActiveButton('LogOut')}
+                onClick={() => handleLogout('LogOut')}
             >
                 <img src="assets/logout.png" alt="" className="icon" />
                 <span className="sidebar-button-text">Log out</span>
