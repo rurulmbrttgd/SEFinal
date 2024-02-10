@@ -85,11 +85,11 @@ export default function Register() {
                 <div className='main-password'>
                     <div className='password'>
                         <label className='label'>Password</label>
-                        <input className='input' placeholder="**********" onChange={e => setValues({...values, busowner_password: e.target.value})}/>
+                        <input className='input' type="password" placeholder="**********" onChange={e => setValues({...values, busowner_password: e.target.value})}/>
                     </div>
                     <div className='password'>
                         <label className='label'>Confirm Password</label>
-                        <input className='input' placeholder="**********" onChange={e => setValues({...values, confirm_password: e.target.value})}/>
+                        <input className='input' type="password" placeholder="**********" onChange={e => setValues({...values, confirm_password: e.target.value})}/>
                         <input className='input' />
                     </div>
                 </div>
